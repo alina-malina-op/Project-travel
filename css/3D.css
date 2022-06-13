@@ -1,7 +1,0 @@
-#transform{
-    transition: all 0.5s ease;
-}
-
-#transform:hover{
-    transform: scale(0.6) scaleZ(1.0) rotateX(9deg) rotateY(9deg);
-}
