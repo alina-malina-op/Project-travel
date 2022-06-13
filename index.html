@@ -6,39 +6,393 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- отображение элементов в соответствии с современными стандартами -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/up.button.css">
+    <link rel="stylesheet" href="css/3D.css">
+    <!-- <link rel="stylesheet" href="css/jquery.formstyler.theme.css"> -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+
 </head>
 
 <body>
-    <header class="header">
+
+    <header class="header" id="page-top">
         <div class="header_top">
             <div class="container">
-                <a class="header_phone" href="tel:380963092145">+38 (096) 309 21 45</a>
-                <a class="header_email" href="#">layout585@gmail.com</a>
-                <a class="header_btn" href="#">Free consultation</a>
+                <div class="header_contacts">
+                    <a class="header_phone" href="tel:375333883092">+375 (33) 388 30 92</a>
+                    <a class="header_email" href="#">sergeevnaal228@gmail.com</a>
+                    <a data-fancybox data-src="#modal" href="javascript:;" class="header_btn" href="#">Бесплатная
+                        консультация</a>
+                </div>
             </div>
         </div>
         <div class="header_content">
             <div class="container">
-                <div class="header_logo">
-                    <a href="#">
-                        <img src="img/logo.png" alt="">
-                    </a>
+                <div class="header_content-inner">
+                    <div class="header_logo">
+                        <a href="#">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                    <nav class="menu">
+                        <div class="header_btn-menu">
+                            <span class="icon-bars"></span>
+                        </div>
+                        <ul>
+                            <li><a class="scrollto" href="#page-top">Главная</a></li>
+                            <li><a class="scrollto" href="#services">Услуги</a></li>
+                            <li><a class="scrollto" href="#about">О компании</a></li>
+                            <li><a class="scrollto" href="#contact">Контакты</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About company</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </header>
+
+    <section class="slider" id="services">
+        <div class="container">
+            <div class="slider_inner">
+                <div class="slider_item">
+                    <div class="slider_item-content">
+                        <div class="slider_title">
+                            АВИА ТУРЫ 2022
+                        </div>
+                        <div class="slider_text">
+                            В такие туры включены перелет, проживание в отеле, питание (полное или частичное) и трансфер
+                            аэропорт-отель. Это традиционный пляжный отдых, экскурсии в таких турах докупаются на месте.
+                        </div>
+                        <a data-fancybox data-src="#modal" href="javascript:;" class="slider_btn default-btn" id="transform">
+                            Подобрать тур
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slider_item">
+                    <div class="slider_item-content">
+                        <div class="slider_title">
+                            ЭКСКУРСИОННЫЕ ТУРЫ 2022
+                        </div>
+                        <div class="slider_text">
+                            Экскурсионные туры - это специальные групповые маршруты, которые мы основательно продумали
+                            для Вас. Здесь есть и автобусные туры по Европе, и авторские авиатуры по всему миру, и
+                            круизы по Балтике.
+                        </div>
+                        <a data-fancybox data-src="#modal" href="javascript:;" class="slider_btn default-btn" id="transform">
+                            Подобрать тур
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slider_item">
+                    <div class="slider_item-content">
+                        <div class="slider_title">
+                            ГОРЯЩИЕ ТУРЫ 2022
+                        </div>
+                        <div class="slider_text">
+                            Горящие туры – это прекрасная возможность отдохнуть всей семьей с значительной выгодой.
+                            Качество обслуживания, авиаперелет, включенные услуги – все то же самое, что и у других
+                            обладателей аналогичной путевки, только цена заметно снижена.
+                        </div>
+                        <a data-fancybox data-src="#modal" href="javascript:;" class="slider_btn default-btn" id="transform">
+                            Подобрать тур
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="services_top">
+                <div class="services_title-box">
+                    <div class="services_title">
+                        Наши предложения
+                    </div>
+                </div>
+                <div class="services_btn">
+                    <!-- ссылку в отдельный див чтобы не расширялась -->
+                    <a class="scrollto" href="#services">
+                        Наши услуги
+                    </a>
+                </div>
+            </div>
+            <div class="services_items">
+                <div class="services_item">
+                    <img src="img/services-1.png" alt="">
+                    <div class="services_item-title">
+                        Самые красивые города Европы
+                    </div>
+                    <div class="services_item-text">
+                        100 городов в 30 европейских странах. Выгодные автобусные туры!
+                    </div>
+                    <div class="services_item-btn">
+                        <a href="#" class="slider_btn default-btn" id="transform">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+                <div class="services_item">
+                    <img src="img/services-2.png" alt="">
+                    <div class="services_item-title">
+                        Туристический календарь
+                    </div>
+                    <div class="services_item-text">
+                        Куда поехать в определённые месяцы
+                    </div>
+                    <div class="services_item-btn">
+                        <a href="#" class="slider_btn default-btn" id="transform">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+                <div class="services_item">
+                    <img src="img/services-3.png" alt="">
+                    <div class="services_item-title">
+                        Рассрочка до 10 месяцев
+                    </div>
+                    <div class="services_item-text">
+                        Халва, черепаха,карта покупок, smart-карта, fun онлайн-рассрочка от наших партнёров
+                    </div>
+                    <div class="services_item-btn">
+                        <a href="#" class="slider_btn default-btn" id="transform">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about_inner">
+                <div class="about_title">
+                    О компании
+                </div>
+                <div class="about_text">
+                    Наша компания открылась в ноябре 2014 года. К текущему времени мы успели создать один из лучших и
+                    самых посещаемых туристических порталов Беларуси с уникальным контентом, а также открыть несколько
+                    уютных офисов.
+                </div>
+                <a href="#" class="about_btn default-btn" id="transform">
+                    Узнать больше </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="form">
+        <div class="container">
+            <div class="form_inner">
+                <div class="form_content">
+                    <div class="form_title-box">
+                        <div class="form_title" id="transform">
+                            Получить консультацию
+                        </div>
+                    </div>
+                    <div class="form_box">
+                        <form>
+                            <div class="form_box-inner">
+                                <div class="form_box-left">
+                                    <label>
+                                        E-mail
+                                        <input type="text">
+                                    </label>
+                                    <label>
+                                        Контактный номер
+                                        <input type="text">
+                                    </label>
+                                    <label>
+                                        Полное имя
+                                        <input type="text">
+                                    </label>
+                                    <label>
+                                        Тема вопроса
+                                        <select>
+                                            <option>-----------</option>
+                                            <option>-----------</option>
+                                            <option>-----------</option>
+                                            <option>-----------</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="form_box-right">
+                                    <label>
+                                        Сообщение
+                                        <textarea></textarea>
+                                    </label>
+                                    <button class="default-btn" type="submit" id="transform">
+                                        Получить консультацию
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <div class="container">
+            <div class="advantages_inner">
+                <div class="advantages-item">
+                    <div class="advantages_title">
+                        сложность и продуманность сайта компании
+                    </div>
+                </div>
+                <div class="advantages-item">
+                    <div class="advantages_title">
+                        количество отзывов о компании
+                    </div>
+                </div>
+                <div class="advantages-item">
+                    <div class="advantages_title">
+                        честную стоимость туров
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <div class="news_top">
+                <div class="news_title-box">
+                    <div class="news_title">
+                        Наши новости
+                    </div>
+                </div>
+                <div class="news_btn">
+                    <!-- ссылку в отдельный див чтобы не расширялась -->
+                    <a href="#">
+                        Другие новости
+                    </a>
+                </div>
+            </div>
+            <div class="news_inner">
+                <div class="news_slider">
+                    <div class="news_slider-inner">
+                        <div class="news_slider-item">
+                            <div class="news_slider-title">Медицинское страхование за границей</div>
+                            <div class="news_slider-text">Выезжая на отдых за границу, многие белорусские
+                                путешественники не задумываются о том, что им может понадобиться медицинская помощь в
+                                другой стране. На самом же деле, уберечь своё здоровье от различных эпидемий,
+                                разбушевавшихся стихий и даже простых ДТП очень важно. Дело в том, что квалифицированное
+                                лечение за рубежом стоит немалых денег для иностранцев, даже в азиатских странах. Что уж
+                                тогда говорить о Европе. Именно тогда на помощь приходит добровольное медицинское
+                                страхование или ДМС, которое помогает оформить People Travel.</div>
+                        </div>
+                        <div class="news_slider-item">
+                            <div class="news_slider-title">Трансфер Минск-Москва-Минск</div>
+                            <div class="news_slider-text">Представьте себе, что Вы запланировали свой отпуск в тёплой
+                                солнечной стране на берегу спокойного моря. Чтобы путешествие началось как можно
+                                быстрее, Вам следует добраться до Москвы, а там правильно сориентироваться и вовремя
+                                попасть в аэропорт. Если Вы не очень уверенно чувствуете себя в незнакомых городах, есть
+                                вероятность не успеть к началу своего рейса и попасть в очень неприятную ситуацию. Что
+                                же делать? На помощь придёт организованный и комфортный трансфер до Москвы.</div>
+                        </div>
+                        <div class="news_slider-item">
+                            <div class="news_slider-title">Подарочный сертификат</div>
+                            <div class="news_slider-text">Мы рады предложить подарочные сертификаты на любой из наших
+                                туров. Это отличная возможность порадовать близких Вам людей замечательным подарком.
+                                Ведь что может быть лучше отдыха? Мы разработали красивые фирменные сертификаты, которые
+                                вызовут самые позитивные впечатления у получателей. Сертификат можно приобрести в
+                                рассрочку, а также оплатить любым из способов, указанных у нас на сайте.</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="news_blog">
+                    <div class="news_images">
+                        <img src="img/news-1.jpg" alt="">
+                    </div>
+                    <div class="news_blog-title">
+                        Новости компании
+                    </div>
+                    <div class="news_blog-text">
+                        Текст
+                    </div>
+                </a>
+                <a href="#" class="news_blog">
+                    <div class="news_images">
+                        <img src="img/news-1.jpg" alt="">
+                    </div>
+                    <div class="news_blog-title">
+                        Новости компании
+                    </div>
+                    <div class="news_blog-text">
+                        Текст
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer_content">
+            <div class="container">
+                <div class="footer_inner">
+                    <div class="footer_info">
+                        <div class="footer_title">
+                            Более 900 отзывов
+                        </div>
+                        <div class="footer_text">
+                            Рейтинг компании — 9.7 из 10 по итогам более 900 отзывов на сайте компании и сторонних
+                            независимых порталах.
+                        </div>
+                        <a data-fancybox data-src="#modal" href="javascript:;" class="header_btn" href="#">Бесплатная
+                            консультация</a>
+                        <ul class="footer_list">
+                            <li><a class="footer_phone" href="tel:333333333">+375 (33) 333 33 33</a></li>
+                            <li><a href="#">sergeevnaal228@gmail.com</a></li>
+                            <li><a class="footer_adress" href="#">Беларусь, пр.Независимости</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_map">
+                        <iframe height="250px"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.040925029568!2d27.6368352158606!3d53.93101678010576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf008852cc0d%3A0x9e59b4947e4058e4!2z0L_RgC4g0J3QtdC30LDQstC40YHQuNC80L7RgdGC0LgsINCc0LjQvdGB0Lo!5e0!3m2!1sru!2sby!4v1652063390757!5m2!1sru!2sby"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_copy">
+            <div class="container">
+                <div class="copy_text">
+                    © 2022 dsdsdsdsdsdsdsdssdsdsssssssxxccccc
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal">
+        <form>
+            <input type="text" placeholder="Your name">
+            <input type="text" placeholder="Your namber">
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <a id="button"></a>
+
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html
